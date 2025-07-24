@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-07-24T03:26:41.605897" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon Test Bdd" source="E:\Repository - TST\Robot-Curso\Introdutorio-Robot\Manage\tests\amazon_test_bdd.robot">
+<test id="s1-t1" name="Cenário: Acesso ao Menu &quot;Livros&quot;" line="9">
+<kw name="Dado que o navegador está aberto" owner="amazon_resources">
+<kw name="Abrir o Navegador" owner="amazon_resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-24T03:26:41.830168" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-24T03:26:41.830168" elapsed="4.745681"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-24T03:26:46.576854" elapsed="0.028528"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENU_BOOKS}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-24T03:26:46.605382" elapsed="0.020026"/>
+</kw>
+<doc>Abre o navegador.</doc>
+<status status="PASS" start="2025-07-24T03:26:41.829668" elapsed="4.795740"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:41.829167" elapsed="4.796241"/>
+</kw>
+<kw name="E que estou na home page da Amazon.com.br" owner="amazon_resources">
+<kw name="Acessar a home page do site amazon" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-07-24T03:26:46.627917" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-07-24T03:26:46.627418" elapsed="1.464140"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENU_BOOKS}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-24T03:26:48.091558" elapsed="0.015018"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:46.626411" elapsed="1.480165"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:46.625408" elapsed="1.481168"/>
+</kw>
+<kw name="Quando eu acesso o menu de livros" owner="amazon_resources">
+<kw name="Entrar no menu de livros" owner="amazon_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-24T03:26:48.107583" level="INFO">Clicking element 'xpath=//a[text()='Livros']'.</msg>
+<arg>${MENU_BOOKS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-24T03:26:48.107583" elapsed="2.191844"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TEXTO_HEADER_BOOKS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-24T03:26:50.299427" elapsed="0.017522"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:48.107583" elapsed="2.209366"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:48.107082" elapsed="2.209867"/>
+</kw>
+<kw name="Então deve aparecer o título &quot;Loja de Livros&quot;" owner="amazon_resources">
+<kw name="Verificar se aparece o título &quot;Loja de Livros&quot;" owner="amazon_resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Loja de Livros</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-24T03:26:50.317950" elapsed="0.022527"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-07-24T03:26:50.355489" level="INFO">Element 'xpath=//*[@id="0"]/div/div/h1/span/span' is displayed.</msg>
+<arg>${TEXTO_HEADER_BOOKS}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-24T03:26:50.340477" elapsed="0.015012"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:50.317447" elapsed="0.038042"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:50.317447" elapsed="0.038042"/>
+</kw>
+<kw name="E deve exibir a categoria &quot;Lançamentos&quot;" owner="amazon_resources">
+<kw name="Verificar se aparece a categoria &quot;Lançamentos&quot;" owner="amazon_resources">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-07-24T03:26:50.372508" level="INFO">Element 'xpath=//*[@id="sobe_d_b_ms_2_4"]/a/div/div/img' is displayed.</msg>
+<arg>xpath=//*[@id="sobe_d_b_ms_2_4"]/a/div/div/img</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-24T03:26:50.356494" elapsed="0.016014"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:50.356494" elapsed="0.016014"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:50.355489" elapsed="0.017019"/>
+</kw>
+<doc>Esse teste verifica o menu de livros do site amazon
+e também valores smoke</doc>
+<tag>BDD</tag>
+<tag>GHERKIN</tag>
+<status status="PASS" start="2025-07-24T03:26:41.828666" elapsed="8.543842"/>
+</test>
+<test id="s1-t2" name="Cenário: Pesquisa de um produto" line="19">
+<kw name="Dado que estou na home page da Amazon.com.br" owner="amazon_resources">
+<kw name="Acessar a home page do site amazon" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-07-24T03:26:50.374009" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-07-24T03:26:50.374009" elapsed="1.169297"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENU_BOOKS}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-24T03:26:51.543807" elapsed="0.062591"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:50.374009" elapsed="1.232389"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:50.373507" elapsed="1.232891"/>
+</kw>
+<kw name="Quando eu pesquiso pelo produto &quot;Xbox Series S&quot;" owner="amazon_resources">
+<kw name="Digitar o nome de produto no search e pesquisar" owner="amazon_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-24T03:26:51.607403" level="INFO">Typing text 'Xbox Series S' into text field 'xpath=//*[@id="twotabsearchtextbox"]'.</msg>
+<arg>${CAMPO_PESQUISA}</arg>
+<arg>${produto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-24T03:26:51.606905" elapsed="0.117160"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-24T03:26:51.724566" level="INFO">Clicking element 'xpath=//*[@id="nav-search-submit-button"]'.</msg>
+<arg>${BOTAO_PESQUISA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-24T03:26:51.724065" elapsed="1.717403"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${produto}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-24T03:26:53.441468" elapsed="0.022515"/>
+</kw>
+<arg>Xbox Series S</arg>
+<status status="PASS" start="2025-07-24T03:26:51.606905" elapsed="1.857078"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:51.606398" elapsed="1.857585"/>
+</kw>
+<kw name="Então o resultado da pesquisa deve listar o produto &quot;Xbox Series S&quot;" owner="amazon_resources">
+<kw name="Verificar o resultado da pesquisa se está listando o produto &quot;Xbox Series S&quot;" owner="amazon_resources" source_name="Verificar o resultado da pesquisa se está listando o produto &quot;${PRODUTO}&quot;">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//h2[contains(., '${PRODUTO}')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-24T03:26:53.464482" elapsed="0.012014"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:53.464482" elapsed="0.012014"/>
+</kw>
+<status status="PASS" start="2025-07-24T03:26:53.463983" elapsed="0.012513"/>
+</kw>
+<doc>Esse teste verifica e busca um produto.</doc>
+<tag>BDD</tag>
+<tag>GHERKIN</tag>
+<status status="PASS" start="2025-07-24T03:26:50.373008" elapsed="3.103994"/>
+</test>
+<doc>Essa suíte testa o site da amazon.com.br</doc>
+<status status="PASS" start="2025-07-24T03:26:41.607914" elapsed="11.869587"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">BDD</stat>
+<stat pass="2" fail="0" skip="0">GHERKIN</stat>
+</tag>
+<suite>
+<stat name="Amazon Test Bdd" id="s1" pass="2" fail="0" skip="0">Amazon Test Bdd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
