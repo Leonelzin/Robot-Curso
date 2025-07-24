@@ -66,16 +66,10 @@ Lembre-se de ativar o ambiente virtual antes:
 & ".venv\Scripts\Activate.ps1"
 ```
 
-- Rodar teste específico:
+- Rodar teste específico (exemplo):
 
 ```bash
 robot tests\amazon_test.robot
-```
-
-- Rodar teste BDD:
-
-```bash
-robot tests\amazon_test_bdd.robot
 ```
 
 - Rodar todos os testes na pasta `tests`:
@@ -83,9 +77,6 @@ robot tests\amazon_test_bdd.robot
 ```bash
 robot tests
 ```
-
-*Observação:* Os testes já importam automaticamente o recurso `common/amazon_resources.robot`.
-
 ---
 
 ## 📊 Relatórios e evidências
