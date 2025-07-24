@@ -1,4 +1,4 @@
-# 🚀 Projeto Robot-Curso — Automação com Robot Framework
+# 🚀 Curso de automação com Robot Framework
 
 Este projeto contém testes automatizados utilizando **Robot Framework** e **Browser Library**. A estrutura está organizada para demonstrar boas práticas com arquivos de recursos reutilizáveis, múltiplos testes e geração de evidências (screenshots, relatórios).
 
