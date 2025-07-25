@@ -12,7 +12,7 @@ Este projeto contém testes automatizados utilizando **Robot Framework** e **Bro
 
 ---
 
-## 📂 Estrutura do projeto
+## 📂 Estrutura do projeto (EXEMPLO)
 
 ```
 .venv/                        # Ambiente virtual isolado
@@ -66,10 +66,16 @@ Lembre-se de ativar o ambiente virtual antes:
 & ".venv\Scripts\Activate.ps1"
 ```
 
+- Rodar teste na pasta results (exemplo):
+
+```bash
+robot -d ./results .\UsandoBlocosIF.robot       
+```
+
 - Rodar teste específico (exemplo):
 
 ```bash
-robot tests\amazon_test.robot
+robot -t "Teste de REPEAT KEYWORD" .\UsandoLoops.robot
 ```
 
 - Rodar todos os testes na pasta `tests`:
